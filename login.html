@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>masukan username dan password</h2>
+    <form id="login form">
+<label for="username">username</label>
+<input type="text" id="username" name="usernmae"><br><br>
+<Label for="password">password</Label>
+<input type="password" id="password" name="password"><br><br>
+<button type="button" onclick="checklogin()">login</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+    const usernamebenar= "admin123"; 
+    const passwordbenar= "admin123";
+
+    function checklogin(){
+    event.preventDefault()
+
+    const inputusername = document.getElementById("username").value;
+    const inputpassword = document.getElementById("password").value;
+    const messageElement = document.getElementById("message");
+    
+    const isloginsuccessful = inputusername === usernamebenar && inputpassword === passwordbenar;
+     messageElement.textContent = isloginsuccessful ? "Selamat Datang! anda memiliki akses ke sistem" : "Maaf anda tidak memiliki akses";
+}
+    </script>
+</body>
+</html>
